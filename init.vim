@@ -68,8 +68,6 @@ call plug#begin('~/AppData/Local/nvim/plugged')
 
 call plug#end()
 
-" Theme
-colorscheme NeoSolarized
 
 
 " Telescope

@@ -14,4 +14,4 @@ On windows run:
     choco install fd
     choco install llvm
 
-Don't use winget - neovim does not like the way it symlings `rg` and `fd`.
+Don't use `winget` - neovim does not like the way it symlings `rg` and `fd`.

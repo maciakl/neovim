@@ -5,6 +5,8 @@ My quick and dirty Neovim setup circa 2023.
 ## Dependencies
 
 - [Plug](https://github.com/junegunn/vim-plug) - plugin manager
+- [Nerd Font](https://www.nerdfonts.com/) - a patched icon font (eg. Fira)
+
 - [ripgrep](https://github.com/BurntSushi/ripgrep)
 - [fd](https://github.com/sharkdp/fd)
 

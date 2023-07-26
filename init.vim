@@ -65,6 +65,7 @@ call plug#begin('~/AppData/Local/nvim/plugged')
 
 	" highlighting
 	Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
 call plug#end()
 
 " Theme

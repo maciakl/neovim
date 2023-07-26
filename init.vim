@@ -64,10 +64,10 @@ call plug#begin('~/AppData/Local/nvim/plugged')
 	" dev icons
 	" download a nerd font from https://www.nerdfonts.com/
 	Plug 'nvim-tree/nvim-web-devicons'
-	
+
 	" code completion
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
-	
+
 	" fuzzy finder
 	Plug 'nvim-lua/plenary.nvim'
 	Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.2' }

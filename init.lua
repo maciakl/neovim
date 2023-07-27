@@ -1,18 +1,40 @@
 -- My Neovim setup cica 2023
 
+-- basics
 vim.opt.showmatch = true
 vim.opt.hlsearch = true
 vim.opt.incsearch = true
-vim.opt.number = true
 vim.opt.cc = "80"
-vim.opt.syntax = "on"
 vim.opt.cursorline = true
 vim.opt.spell = true
 
+-- line numbers
+vim.opt.number = true
+vim.opt.relativenumber = true
+
+-- tabs
 vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
+vim.opt.smartindent = true
 
+-- disable swap files and backups, enable undo file
+vim.opt.swapfile = false
+vim.opt.backup = false
+vim.opt.undofile = true
+
+vim.scrolloff = 8
+
+-- remap leader to space
+vim.g.mapleader = " "
+
+
+-- Move visually selected block with Shift-J and Shift-K
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+
+-- Legacy settings from .vimrc
 vim.cmd([[
 
     syntax on
@@ -20,9 +42,6 @@ vim.cmd([[
 
 	" use jj to get out of insert mode
 	inoremap jj <ESC>
-
-	" remap leader to space
-	let mapleader="\<space>"
 
 	" pressing <leader><space> clears the search highlights
 	nmap <silent> <leader><space> :nohlsearch<CR>

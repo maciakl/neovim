@@ -22,6 +22,7 @@ call plug#begin('~/AppData/Local/nvim/plugged')
 	Plug 'preservim/nerdcommenter'
 	Plug 'tpope/vim-surround'
 	Plug 'godlygeek/tabular'
+    Plug 'mbbill/undotree'
 
 	" dev icons
 	" download a nerd font from https://www.nerdfonts.com/
@@ -37,9 +38,26 @@ call plug#begin('~/AppData/Local/nvim/plugged')
 	" highlighting
 	Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
+    " lsp-zero
+    Plug 'neovim/nvim-lspconfig'                           " Required
+    Plug 'williamboman/mason.nvim', {'do': ':MasonUpdate'} " Optional
+    Plug 'williamboman/mason-lspconfig.nvim'               " Optional
+
+    " Autocompletion
+    Plug 'hrsh7th/nvim-cmp'     " Required
+    Plug 'hrsh7th/cmp-nvim-lsp' " Required
+    Plug 'L3MON4D3/LuaSnip'     " Required
+
+    Plug 'VonHeikemen/lsp-zero.nvim', {'branch': 'v2.x'}
+
 call plug#end()
 
 ]])
+
+
+-- UNDOTREE SETUP
+
+vim.cmd([[ nnoremap <leader>uu :UndotreeToggle<CR>]])
 
 -- TELESCOPE CONFIG
 -------------------
@@ -58,8 +76,8 @@ vim.cmd([[
 -- COC SETUP
 ------------
 -- to install language servers run CoCInstall
--- 	CoCInstall coc-sumneko-lua
 -- 	CoCInstall coc-vimlsp
+-- 	CoCInstall coc-tsserver
 
 vim.opt.backup = false
 vim.opt.writebackup = false
@@ -111,3 +129,17 @@ require'nvim-treesitter.configs'.setup {
 		additional_vim_regex_highlighting = false,
 	},
 }
+
+
+-- LSP ZERO CONFIG
+
+local lsp = require('lsp-zero').preset({})
+
+lsp.on_attach(function(client, bufnr)
+  lsp.default_keymaps({buffer = bufnr})
+end)
+
+-- Configure lua language server for neovim
+require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
+
+lsp.setup()

@@ -3,6 +3,7 @@
 
 -- Install Plug from https://github.com/junegunn/vim-plug
 
+-- Plug Block
 vim.cmd([[
 
 call plug#begin('~/AppData/Local/nvim/plugged')
@@ -79,10 +80,7 @@ vim.cmd([[
 -- 	CoCInstall coc-vimlsp
 -- 	CoCInstall coc-tsserver
 
-vim.opt.backup = false
 vim.opt.writebackup = false
-vim.opt.updatetime = 300
-vim.opt.signcolumn = "yes"
 
 local keyset = vim.keymap.set
 

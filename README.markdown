@@ -18,6 +18,10 @@ On windows run:
     choco install llvm
     choco install mingw
     choco install python3
+    choco install gzip
+    choco install unzip
+    choco install wget
+    choco install tree-sitter
 
 
 Don't use `winget` - neovim does not like the way it symlings `rg` and `fd`.

@@ -25,14 +25,18 @@ vim.opt.backup = false
 vim.opt.undofile = true
 
 vim.scrolloff = 8
+vim.opt.updatetime = 50
+
+-- the leftmost margin
+vim.opt.signcolumn = "yes"
 
 -- remap leader to space
 vim.g.mapleader = " "
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 
 -- Move visually selected block with Shift-J and Shift-K
-vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
-vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 -- Legacy settings from .vimrc
 vim.cmd([[

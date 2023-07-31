@@ -74,3 +74,11 @@ require('plugins')
 if vim.fn.has('win32') then
     require('windows')
 end
+
+if vim.fn.has('mac') then
+    require('mac')
+end
+
+if vim.g.neovide then
+    require('neovide');
+end

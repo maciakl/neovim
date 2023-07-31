@@ -69,16 +69,21 @@ vim.cmd([[
 
 ]])
 
+-- PLUGIN HANDLING
 require('plugins')
 
+
+-- WINDOWS SETTINGS
 if vim.fn.has('win32') then
     require('windows')
 end
 
+-- MAC SETTINGS
 if vim.fn.has('mac') then
     require('mac')
 end
 
+-- NEOVIDE GUI SETTINGS
 if vim.g.neovide then
     require('neovide');
 end

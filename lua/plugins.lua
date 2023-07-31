@@ -71,6 +71,14 @@ vim.cmd([[
 	nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 	nnoremap <leader>fb <cmd>Telescope buffers<cr>
 	nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+
+    if has('mac')
+        nnoremap <D-Up> <cmd>Telescope buffers<cr>
+        nnoremap <D-Down> <cmd>Telescope find_files<cr>
+    else
+        nnoremap <A-Up> <cmd>Telescope buffers<cr>
+        nnoremap <A-Down> <cmd>Telescope find_files<cr>
+    endif
 ]])
 
 

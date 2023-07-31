@@ -15,9 +15,6 @@ call plug#begin('~/AppData/Local/nvim/plugged')
 	Plug 'vim-airline/vim-airline'
 	Plug 'vim-airline/vim-airline-themes'
 
-	" navigation
-	Plug 'Shougo/unite.vim'
-	Plug 'preservim/nerdtree'
 
 	" helpers
 	Plug 'preservim/nerdcommenter'
@@ -39,7 +36,7 @@ call plug#begin('~/AppData/Local/nvim/plugged')
 	" highlighting
 	Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
-    " lsp-zero
+    " LSP auto-config
     Plug 'neovim/nvim-lspconfig'                           " Required
     Plug 'williamboman/mason.nvim', {'do': ':MasonUpdate'} " Optional
     Plug 'williamboman/mason-lspconfig.nvim'               " Optional

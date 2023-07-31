@@ -3,5 +3,4 @@
 colorscheme NeoSolarized
 
 " Fonts
-set guifont=Fira\ Code
-
+GuiFont! Fira\ Code:h12

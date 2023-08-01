@@ -74,7 +74,7 @@ require('plugins')
 
 
 -- WINDOWS SETTINGS
-if vim.fn.has('win32') then
+if vim.fn.has('win32') or vim.fn.has('win64') then
     require('windows')
 end
 

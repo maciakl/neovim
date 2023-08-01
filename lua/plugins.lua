@@ -64,11 +64,14 @@ vim.cmd([[ nnoremap <leader>uu :UndotreeToggle<CR>]])
 --	choco install ripgrep
 
 vim.cmd([[
+    " set basic shortcuts
 	nnoremap <leader>ff <cmd>Telescope find_files<cr>
 	nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 	nnoremap <leader>fb <cmd>Telescope buffers<cr>
 	nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
+    " set Alt-Up and Alt-Down to use Telescope for file and buffer browsing
+    " use Cmd-Up and Cmd-Down on mac
     if has('mac')
         nnoremap <D-Up> <cmd>Telescope buffers<cr>
         nnoremap <D-Down> <cmd>Telescope find_files<cr>

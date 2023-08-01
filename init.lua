@@ -32,11 +32,11 @@ vim.opt.signcolumn = "yes"
 
 -- remap leader to space
 vim.g.mapleader = " "
+
+-- Move visually selected block with Shift-J and Shift-K
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
-
--- Move visually selected block with Shift-J and Shift-K
 
 -- Legacy settings from .vimrc
 vim.cmd([[

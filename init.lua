@@ -32,11 +32,11 @@ vim.opt.signcolumn = "yes"
 
 -- remap leader to space
 vim.g.mapleader = " "
+
+-- Move visually selected block with Shift-J and Shift-K
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
-
--- Move visually selected block with Shift-J and Shift-K
 
 -- Legacy settings from .vimrc
 vim.cmd([[
@@ -72,13 +72,12 @@ vim.cmd([[
 -- PLUGIN HANDLING
 require('plugins')
 
-
--- WINDOWS SETTINGS
+-- WINDOWS SPECIFIC SETTINGS
 if vim.fn.has('win32') or vim.fn.has('win64') then
     require('windows')
 end
 
--- MAC SETTINGS
+-- MAC SPECIFIC SETTINGS
 if vim.fn.has('mac') then
     require('mac')
 end

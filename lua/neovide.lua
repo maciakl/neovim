@@ -1,6 +1,9 @@
 -- NEOVIDE GUI SETTINGS
 -- these settings are only used in Neovide front end
 
+vim.o.guifont = "FiraCode Nerd Font:h14"
+vim.g.neovide_padding_top = 20
+
 vim.cmd([[
 
     colorscheme NeoSolarized

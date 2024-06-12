@@ -1,6 +1,6 @@
 # My Neovim Setup
 
-My quick and dirty Neovim setup circa 2023.
+My quick and dirty Neovim setup circa 2024.
 
 ## Dependencies
 
@@ -11,7 +11,9 @@ My quick and dirty Neovim setup circa 2023.
 - [fd](https://github.com/sharkdp/fd)
 
 
-On windows run:
+On windows use `choco` or `scoop` to install CLI dependencies.
+
+Run:
 
     choco install ripgrep
     choco install fd
@@ -23,16 +25,40 @@ On windows run:
     choco install wget
     choco install tree-sitter
 
-
-Don't use `winget` - neovim does not like the way it symlings `rg` and `fd`.
+Don't use `winget` - neovim does not like the way it symlinks `rg` and `fd`.
 
 ## Initial Setup
 
 First time opening neovim, run:
 
     :PlugInstall
+    :Copilot setup
 
 Close and re-open.
+
+## GUI
+
+Neovim is no longer bundled with nvim-qt. You can use [Neovide](https://neovide.dev/).
+
+Install Neovide (it's fine to use `winget` for this):
+
+    winget install neovide
+
+or on Mac:
+
+    brew install neovide
+
+
+On Windows you can set up right click context menu:
+
+    Windows Registry Editor Version 5.00
+
+    [HKEY_CLASSES_ROOT\*\shell\Neovim]
+    @="Edit with Neovim"
+    "Icon"="\"C:\\Program Files\\Neovide\\neovide.exe\""
+
+    [HKEY_CLASSES_ROOT\*\shell\Neovim\command]
+    @="\"C:\\Program Files\\Neovide\\neovide.exe\" \"%1\""
 
 ## Providers
 

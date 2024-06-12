@@ -1,6 +1,6 @@
 
 " Theme
-colorscheme NeoSolarized
+" colorscheme NeoSolarized
 
 " Fonts
-GuiFont! Fira\ Code:h12
+"GuiFont! Fira\ Code:h10

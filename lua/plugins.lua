@@ -37,6 +37,8 @@ call plug#begin('~/AppData/Local/nvim/plugged')
 	" highlighting
 	Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
+    "================= LSP =================
+
     " LSP auto-config
     Plug 'neovim/nvim-lspconfig'                           " Required
     Plug 'williamboman/mason.nvim', {'do': ':MasonUpdate'} " Optional
@@ -59,6 +61,9 @@ call plug#end()
 
 -- UNDOTREE SETUP
 vim.cmd([[ nnoremap <leader>uu :UndotreeToggle<CR>]])
+
+-- AIRLINE SETUP
+require('airline')
 
 -- TELESCOPE CONFIG
 require('telescope')

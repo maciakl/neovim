@@ -1,4 +1,3 @@
-
 -- COC SETUP
 ------------
 -- to install language servers run CoCInstall

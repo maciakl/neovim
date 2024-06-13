@@ -7,4 +7,3 @@ vim.cmd([[
         set termguicolors
     endif
 ]]);
-

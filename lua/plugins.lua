@@ -7,35 +7,35 @@ vim.cmd([[
 
 call plug#begin('~/AppData/Local/nvim/plugged')
 
-	" color scheme (solarized dark)
-	Plug 'iCyMind/NeoSolarized'
+    " color scheme (solarized dark)
+    Plug 'iCyMind/NeoSolarized'
 
-	" status bar
-	Plug 'vim-airline/vim-airline'
-	Plug 'vim-airline/vim-airline-themes'
+    " status bar
+    Plug 'vim-airline/vim-airline'
+    Plug 'vim-airline/vim-airline-themes'
 
 
-	" helpers
-	Plug 'preservim/nerdcommenter'
-	Plug 'tpope/vim-surround'
-	Plug 'godlygeek/tabular'
+    " helpers
+    Plug 'preservim/nerdcommenter'
+    Plug 'tpope/vim-surround'
+    Plug 'godlygeek/tabular'
     Plug 'mbbill/undotree'
 
-	" dev icons (download a nerd font from https://www.nerdfonts.com/)
-	Plug 'nvim-tree/nvim-web-devicons'
+    " dev icons (download a nerd font from https://www.nerdfonts.com/)
+    Plug 'nvim-tree/nvim-web-devicons'
 
-	" code completion
-	Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    " code completion
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
     " copilot
     Plug 'github/copilot.vim'
 
-	" fuzzy finder
-	Plug 'nvim-lua/plenary.nvim'
-	Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.2' }
+    " fuzzy finder
+    Plug 'nvim-lua/plenary.nvim'
+    Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.2' }
 
-	" highlighting
-	Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+    " highlighting
+    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
     "================= LSP =================
 

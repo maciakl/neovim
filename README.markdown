@@ -7,8 +7,9 @@ My quick and dirty Neovim setup circa 2024.
 - [Plug](https://github.com/junegunn/vim-plug) - plugin manager
 - [Nerd Font](https://www.nerdfonts.com/) - a patched icon font (eg. Fira)
 
-- [ripgrep](https://github.com/BurntSushi/ripgrep)
-- [fd](https://github.com/sharkdp/fd)
+- [ripgrep](https://github.com/BurntSushi/ripgrep) - fast grep
+- [fd](https://github.com/sharkdp/fd) - fast file search
+- [tree-sitter](https://github.com/tree-sitter/tree-sitter/tree/master/cli) - code parser for hilights
 
 
 On windows use `choco` or `scoop` to install CLI dependencies.
@@ -59,6 +60,38 @@ On Windows you can set up right click context menu:
 
     [HKEY_CLASSES_ROOT\*\shell\Neovim\command]
     @="\"C:\\Program Files\\Neovide\\neovide.exe\" \"%1\""
+
+
+## Plugins
+
+Following plugins are in use.
+
+### Theme and UI
+
+- [NeoSolarized Theme](https://github.com/overcache/NeoSolarized)
+- [Airline](https://github.com/vim-airline/vim-airline)
+- [Dev-Icons](https://github.com/nvim-tree/nvim-web-devicons)
+
+### Code Hithlightighting
+
+- [Tree-Sitter](https://github.com/nvim-treesitter/nvim-treesitter)
+
+### Fuzzy Finder & Navigation
+
+- [Telescope](https://github.com/nvim-telescope/telescope.nvim)
+
+### LSP
+
+- [COC](https://github.com/neoclide/coc.nvim)
+- [LSP Auto-Config](https://github.com/neovim/nvim-lspconfig)
+
+### Other
+
+- [Surround](https://github.com/tpope/vim-surround)
+- [Tabular](https://github.com/godlygeek/tabular)
+- [NERD Commenter](https://github.com/preservim/nerdcommenter)
+- [Unto Tree](https://github.com/mbbill/undotree)
+- [Copilot](https://github.com/github/copilot.vim)
 
 ## Providers
 

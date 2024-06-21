@@ -2,6 +2,16 @@
 
 My quick and dirty Neovim setup circa 2024.
 
+## Config Files
+
+Neovim config files are located in:
+
+    ~/.config/nvim/
+
+Or on Windows:
+
+    %LOCALAPPDATA%\nvim
+
 ## Dependencies
 
 - [Plug](https://github.com/junegunn/vim-plug) - plugin manager

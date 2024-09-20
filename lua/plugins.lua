@@ -37,6 +37,11 @@ call plug#begin('~/AppData/Local/nvim/plugged')
     " highlighting
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
+    " Harpoon bookmarking
+    Plug 'ThePrimeagen/harpoon', {'branch' : 'harpoon2'}
+
+
+
     "================= LSP =================
 
     " LSP auto-config
@@ -73,6 +78,9 @@ require('coc')
 
 -- TREESITTER SETUP
 require('treesitter')
+
+-- HARPOON SETUP
+require('harpooncfg')
 
 -- LSP ZERO CONFIG SETUP
 require('lsp')

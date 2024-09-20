@@ -67,7 +67,12 @@ vim.cmd([[
 	nnoremap <A-left> :bprev<cr>
 	nnoremap <A-right> :bnext<cr>
 
+    " Edit the init.lua file
+    command! CONFIG :e $MYVIMRC | :cd %:p:h
+
+
 ]])
+
 
 -- PLUGIN HANDLING
 require('plugins')

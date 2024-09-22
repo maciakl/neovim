@@ -14,7 +14,8 @@ vim.cmd([[
     " lsp dependent bindings
 
     " show all symbols in the current buffer
-    nnoremap <leader>fs <cmd>Telescope lsp_document_symbols<cr>
+    nnoremap <A-\> <cmd>Telescope lsp_document_symbols<cr>
+    nnoremap <C-\> <cmd>Telescope lsp_workspace_symbols<cr>
 
     " show the definition of the word under the cursor
     nnoremap <leader>fd <cmd>Telescope lsp_definitions<cr>

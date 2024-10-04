@@ -7,10 +7,12 @@ vim.g.neovide_padding_top = 0
 -- particle effects
 vim.g.neovide_cursor_vfx_mode = "railgun"
 
+-- set window title
+vim.opt.title = true
+
 vim.cmd([[
 
     colorscheme NeoSolarized
-
 
     " enable Cmd+C amd Cmc+V 
     if has('mac')

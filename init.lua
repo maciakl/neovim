@@ -91,3 +91,5 @@ end
 if vim.g.neovide then
     require('neovide');
 end
+
+require('hpop')

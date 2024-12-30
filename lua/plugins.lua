@@ -25,7 +25,7 @@ call plug#begin('~/AppData/Local/nvim/plugged')
     Plug 'nvim-tree/nvim-web-devicons'
 
     " code completion
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    "Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
     " copilot
     Plug 'github/copilot.vim'
@@ -36,10 +36,6 @@ call plug#begin('~/AppData/Local/nvim/plugged')
 
     " highlighting
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-
-    " Harpoon bookmarking
-    Plug 'ThePrimeagen/harpoon', {'branch' : 'harpoon2'}
-
 
 
     "================= LSP =================
@@ -74,13 +70,10 @@ require('airline')
 require('telescope')
 
 -- COC SETUP
-require('coc')
+-- require('coc')
 
 -- TREESITTER SETUP
 require('treesitter')
-
--- HARPOON SETUP
-require('harpooncfg')
 
 -- LSP ZERO CONFIG SETUP
 require('lsp')

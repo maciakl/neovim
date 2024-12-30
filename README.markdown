@@ -104,7 +104,6 @@ Following plugins are in use.
 
 ### LSP
 
-- [COC](https://github.com/neoclide/coc.nvim)
 - [LSP Auto-Config](https://github.com/neovim/nvim-lspconfig)
 
 ### Other

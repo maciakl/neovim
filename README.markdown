@@ -104,7 +104,7 @@ Following plugins are in use.
 
 ### LSP
 
-- [LSP Auto-Config](https://github.com/neovim/nvim-lspconfig)
+- [LSP Zero-Config 2.X](https://github.com/VonHeikemen/lsp-zero.nvim/tree/v2.x)
 
 ### Other
 

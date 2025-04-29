@@ -12,8 +12,6 @@ vim.opt.title = true
 
 vim.cmd([[
 
-    colorscheme NeoSolarized
-
     " enable Cmd+C amd Cmc+V 
     if has('mac')
         let g:neovide_input_use_logo = 1

@@ -8,7 +8,8 @@ vim.cmd([[
 call plug#begin('~/AppData/Local/nvim/plugged')
 
     " color scheme (solarized dark)
-    Plug 'iCyMind/NeoSolarized'
+    " Plug 'iCyMind/NeoSolarized'
+    Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 
     " status bar
     Plug 'vim-airline/vim-airline'
@@ -59,6 +60,9 @@ call plug#end()
 
 -- PLUGIN SPECIFIC CONFIGURATIONS
 -- These are kept in separate files for better organization
+
+-- Theme
+vim.cmd.colorscheme "catppuccin-mocha"
 
 -- UNDOTREE SETUP
 vim.cmd([[ nnoremap <leader>uu :UndotreeToggle<CR>]])

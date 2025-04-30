@@ -1,13 +1,13 @@
 -- LSP ZERO CONFIG SETUP
 -- Configure language servers
+-- No more LSP-ZERO
 
-local lsp = require('lsp-zero').preset({})
+-- Enable MASON LSP package manager
+require("mason").setup()
 
-lsp.on_attach(function(client, bufnr)
-  lsp.default_keymaps({buffer = bufnr})
-end)
+-- Enable inline error messages
+vim.diagnostic.config({ virtual_text = true })
 
--- Configure lua language server for neovim
-require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
-
-lsp.setup()
+vim.lsp.enable('lua_ls')
+vim.lsp.enable('gopls')
+vim.lsp.enable('rust_analyzer')

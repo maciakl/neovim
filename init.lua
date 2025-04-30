@@ -70,7 +70,6 @@ vim.cmd([[
     " Edit the init.lua file
     command! CONFIG :e $MYVIMRC | :cd %:p:h
 
-
 ]])
 
 

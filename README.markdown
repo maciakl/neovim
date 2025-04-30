@@ -104,14 +104,16 @@ Following plugins are in use.
 
 ### LSP
 
-- [LSP Zero-Config 2.X](https://github.com/VonHeikemen/lsp-zero.nvim/tree/v2.x)
+- [Mason](https://github.com/williamboman/mason.nvim)
+- [Mason LSP-Config](https://github.com/williamboman/mason-lspconfig.nvim)
+- [LSP Config](https://github.com/neovim/nvim-lspconfig)
+
 
 ### Other
 
 - [Surround](https://github.com/tpope/vim-surround)
 - [Tabular](https://github.com/godlygeek/tabular)
 - [NERD Commenter](https://github.com/preservim/nerdcommenter)
-- [Unto Tree](https://github.com/mbbill/undotree)
 - [Copilot](https://github.com/github/copilot.vim)
 
 ## Providers

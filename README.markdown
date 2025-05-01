@@ -1,6 +1,6 @@
 # My Neovim Setup
 
-My quick and dirty Neovim setup circa 2024.
+My quick and dirty Neovim setup circa 2025.
 
 ## Config Files
 
@@ -90,7 +90,10 @@ Following plugins are in use.
 
 ### Theme and UI
 
-- [NeoSolarized Theme](https://github.com/overcache/NeoSolarized)
+I finally ditched Solarized.
+
+- <strike>[NeoSolarized Theme](https://github.com/overcache/NeoSolarized)</strike>
+- [Catppuccin Theme](https://github.com/catppuccin/nvim)
 - [Airline](https://github.com/vim-airline/vim-airline)
 - [Dev-Icons](https://github.com/nvim-tree/nvim-web-devicons)
 
@@ -104,10 +107,17 @@ Following plugins are in use.
 
 ### LSP
 
+I finally removed the LSP-Zero dependencies since they are deprecated now. Mason
+is still a fantastic package manager for installing LSP servers, and lsp-config
+sets them up for free.
+
 - [Mason](https://github.com/williamboman/mason.nvim)
 - [Mason LSP-Config](https://github.com/williamboman/mason-lspconfig.nvim)
 - [LSP Config](https://github.com/neovim/nvim-lspconfig)
 
+Unfortunate manual part is activating the LSP servers:
+
+    vim.lsp.enable('gopls')
 
 ### Other
 

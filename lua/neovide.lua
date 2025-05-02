@@ -10,15 +10,18 @@ vim.g.neovide_cursor_vfx_mode = "railgun"
 -- set window title
 vim.opt.title = true
 
-vim.cmd([[
+if vim.fn.has('mac') then
 
-    " enable Cmd+C amd Cmc+V 
-    if has('mac')
+    vim.g.neovide_input_macos_alt_is_meta = true
+
+    vim.cmd([[
+        " enable Cmd+C amd Cmc+V 
         let g:neovide_input_use_logo = 1
         map <D-v> "+p<CR>
         map! <D-v> <C-R>+
         tmap <D-v> <C-R>+
         vmap <D-c> "+y<CR>
-    endif
 
-]]);
+        let g:neovide_input_macos_alt_is_meta = v:true
+    ]]);
+end

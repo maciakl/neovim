@@ -36,9 +36,9 @@ call plug#begin('~/AppData/Local/nvim/plugged')
     "================= LSP =================
 
     " LSP auto-config
+    Plug 'mason-org/mason.nvim'
+    Plug 'mason-org/mason-lspconfig.nvim'
     Plug 'neovim/nvim-lspconfig'
-    Plug 'williamboman/mason.nvim', {'do': ':MasonUpdate'}
-    Plug 'williamboman/mason-lspconfig.nvim'
 
 call plug#end()
 

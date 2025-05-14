@@ -6,7 +6,6 @@
 
 vim.cmd([[
     " standard binding
-	nnoremap <leader>ff <cmd>Telescope find_files<cr>
 	nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 	nnoremap <leader>fb <cmd>Telescope buffers<cr>
 	nnoremap <leader>fh <cmd>Telescope help_tags<cr>
@@ -22,14 +21,7 @@ vim.cmd([[
 
 
     " Set Alt-Up and Alt-Down to open buffers and find files
-    " Use Cmd-Up and Cmd-Down on Mac
-    if has('mac')
-        nnoremap <leader><M-Up> <cmd>Telescope buffers<cr>
-        nnoremap <leader><M-Down> <cmd>Telescope find_files<cr>
-        nnoremap <M-\> <cmd>Telescope lsp_document_symbols<cr>
-    else
-        nnoremap <A-Up> <cmd>Telescope buffers<cr>
-        nnoremap <A-Down> <cmd>Telescope find_files<cr>
-        nnoremap <A-\> <cmd>Telescope lsp_document_symbols<cr>
-    endif
+    nnoremap <A-Up> <cmd>Telescope buffers<cr>
+    nnoremap <A-Down> <cmd>Telescope find_files<cr>
+    nnoremap <A-\> <cmd>Telescope lsp_document_symbols<cr>
 ]])

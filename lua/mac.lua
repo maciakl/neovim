@@ -1,10 +1,9 @@
 -- MAC ONLY SETTINGS
 --
-
-vim.cmd([[
-	nnoremap <M-left> :bprev<cr>
-	nnoremap <M-right> :bnext<cr>
-
-	nnoremap <S-D-left> :bprev<cr>
-	nnoremap <S-D-right> :bnext<cr>
-]]);
+-- Put the following lines in ~/.config/ghostty/config
+--
+--      macos-option-as-alt = left
+--      keybind = alt+left=unbind
+--      keybind = alt+right=unbind
+--
+--      This will make the Option key work as Alt

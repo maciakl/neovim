@@ -39,7 +39,7 @@ function Helpme()
             " <A-up>        ➡ search buffers",
             " <A-down>      ➡ search files",
             " ",
-            " <ld>\\         ➡ lsp search doc symbols",
+            " <A-\\>         ➡ lsp search doc symbols",
             " <C-\\>         ➡ lsp search proj symbols",
             " <C-o>         ➡ jump back to previous location",
             " <C-S>         ➡ sho LSP definition insert mode",

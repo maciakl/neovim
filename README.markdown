@@ -59,6 +59,17 @@ First time opening neovim, run:
 
 Close and re-open.
 
+## Mac Terminal
+
+Mac has no Alt key and macOS eats bindings that use the Option key if you are using neovim in the terminal. You have to tell your terminal to treat option as alt.
+
+If you ae using Ghostty put the following lines in `~/.config/ghostty/config`
+
+    macos-option-as-alt = left
+    keybind = alt+left=unbind
+    keybind = alt+right=unbind
+
+
 ## GUI
 
 Neovim is no longer bundled with nvim-qt. You can use [Neovide](https://neovide.dev/).

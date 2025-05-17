@@ -26,15 +26,15 @@ On windows use `choco` or `scoop` to install CLI dependencies.
 
 Run:
 
-    choco install ripgrep
-    choco install fd
-    choco install llvm
-    choco install mingw
-    choco install python3
-    choco install gzip
-    choco install unzip
-    choco install wget
-    choco install tree-sitter
+    scoop install ripgrep
+    scoop install fd
+    scoop install llvm
+    scoop install mingw
+    scoop install python3
+    scoop install gzip
+    scoop install unzip
+    scoop install wget
+    scoop install tree-sitter
 
 Don't use `winget` - neovim does not like the way it symlinks `rg` and `fd`.
 
@@ -113,8 +113,13 @@ sets them up for free.
 - [Mason LSP Config](https://github.com/mason-org/mason-lspconfig.nvim)
 - [LSP Config](https://github.com/neovim/nvim-lspconfig)
 
+To instal a server run:
 
-### Other
+    :Mason
+
+Pick a server from the list, press `i` to install it. That's it.
+
+### Other Plugins
 
 - [Surround](https://github.com/tpope/vim-surround)
 - [Tabular](https://github.com/godlygeek/tabular)

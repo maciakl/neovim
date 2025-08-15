@@ -1,4 +1,4 @@
--- My Neovim setup cica 2023
+-- My Neovim setup cica 2025
 
 -- basics
 vim.opt.showmatch = true
@@ -7,6 +7,8 @@ vim.opt.incsearch = true
 vim.opt.cc = "80"
 vim.opt.cursorline = true
 vim.opt.spell = true
+
+vim.opt.winborder = "rounded"
 
 -- line numbers
 vim.opt.number = true

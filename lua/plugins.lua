@@ -32,7 +32,6 @@ call plug#begin('~/AppData/Local/nvim/plugged')
     " highlighting
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
-
     "================= LSP =================
 
     " LSP auto-config
@@ -44,6 +43,7 @@ call plug#end()
 
 ]])
 ------------------------------------------------------------------------------
+
 
 -- PLUGIN SPECIFIC CONFIGURATIONS
 -- These are kept in separate files for better organization

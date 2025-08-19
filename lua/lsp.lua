@@ -15,4 +15,4 @@ vim.keymap.set('n', 'K', '<cmd>lua vim.lsp.buf.hover()<cr>')
 vim.keymap.set('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<cr>')
 
 -- format buffer with LSP
-vim.keymap.set('n', '<leader>f', '<cmd>lua vim.lsp.buf.format()<cr>', { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>f', '<cmd>lua vim.lsp.buf.format()<cr>')

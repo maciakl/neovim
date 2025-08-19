@@ -20,15 +20,16 @@ Or on Windows:
 
 - [ripgrep](https://github.com/BurntSushi/ripgrep) - fast grep
 - [fd](https://github.com/sharkdp/fd) - fast file search
+- [fzf](https://github.com/junegunn/fzf) - fuzzy finder
 - [tree-sitter](https://github.com/tree-sitter/tree-sitter/tree/master/cli) - code parser for hilights
 
-
-On windows use `choco` or `scoop` to install CLI dependencies.
+On windows use `scoop` to install CLI dependencies.
 
 Run:
 
     scoop install ripgrep
     scoop install fd
+    scoop install fzf
     scoop install llvm
     scoop install mingw
     scoop install python3
@@ -41,7 +42,7 @@ Don't use `winget` - neovim does not like the way it symlinks `rg` and `fd`.
 
 ## Initial Setup
 
-First, get the Plug installed.
+First, get the [Plug](https://github.com/junegunn/vim-plug) plugin manager installed.
 
 On Mac/Unix/Linux:
 
@@ -102,48 +103,39 @@ Following plugins are in use.
 
 ### Theme and UI
 
-- [Catppuccin Theme](https://github.com/catppuccin/nvim)
-- [Airline](https://github.com/vim-airline/vim-airline)
-- [Dev-Icons](https://github.com/nvim-tree/nvim-web-devicons)
+- [Catppuccin Theme](https://github.com/catppuccin/nvim) - color scheme
+- [Airline](https://github.com/vim-airline/vim-airline) - status bar
+- [Dev-Icons](https://github.com/nvim-tree/nvim-web-devicons) - icons
 
-### Code Hithlightighting
+### Code Highlighting
 
-- [Tree-Sitter](https://github.com/nvim-treesitter/nvim-treesitter)
+- [Tree-Sitter](https://github.com/nvim-treesitter/nvim-treesitter) - superior code highlighting
 
 ### Fuzzy Finder & Navigation
 
-- [Telescope](https://github.com/nvim-telescope/telescope.nvim)
+- [Telescope](https://github.com/nvim-telescope/telescope.nvim) - easy navigation and search
+
+### Helper Functions
+
+- [Mini.nvim](https://github.com/echasnovski/mini.nvim) - align, comment, surround, autocomplete
 
 ### LSP
 
-I finally removed the LSP-Zero dependencies since they are deprecated now. 
+- [Mason](https://github.com/mason-org/mason.nvim) - language server manager/installer
+- [Mason LSP Config](https://github.com/mason-org/mason-lspconfig.nvim) - bridge between Mason and LSP Config
+- [LSP Config](https://github.com/neovim/nvim-lspconfig) - provides config files for all language servers
 
-Mason is still a fantastic package manager for installing LSP servers, and lsp-config
-sets them up for free.
-
-- [Mason](https://github.com/mason-org/mason.nvim)
-- [Mason LSP Config](https://github.com/mason-org/mason-lspconfig.nvim)
-- [LSP Config](https://github.com/neovim/nvim-lspconfig)
-
-To instal a server run:
-
-    :Mason
-
-Pick a server from the list, press `i` to install it. That's it.
+To instal a server run `:Mason`, pick a server from the list, press `i` to install it.
 
 ### Other Plugins
 
-- [Mini.nvim](https://github.com/echasnovski/mini.nvim) - align, comment, surround, autocomplete
 - [Github Copilot](https://github.com/github/copilot.vim) - ai autocomplete
 
 ## Providers
 
-Node:
+Install language providers:
 
     npm install neovim -g
-
-Python:
-
     pip install neovim
 
 ## Troubleshooting

@@ -1,41 +1,41 @@
 -- My Neovim setup cica 2025
 
 -- basics
-vim.opt.showmatch = true
-vim.opt.hlsearch = true
-vim.opt.incsearch = true
-vim.opt.cc = "80"
-vim.opt.cursorline = true
-vim.opt.spell = true
-vim.opt.syntax = "on"
+vim.opt.showmatch       = true
+vim.opt.hlsearch        = true
+vim.opt.incsearch       = true
+vim.opt.cc              = "81"
+vim.opt.cursorline      = true
+vim.opt.spell           = true
+vim.opt.syntax          = "on"
 vim.opt.filetype.plugin = true
 vim.opt.filetype.indent = true
-vim.opt.winborder = "rounded"
+vim.opt.winborder       = "rounded"
 
 -- line numbers
-vim.opt.number = true
-vim.opt.relativenumber = true
+vim.opt.number          = true
+vim.opt.relativenumber  = true
 
 -- tabs
-vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
-vim.opt.shiftwidth = 4
-vim.opt.expandtab = true
-vim.opt.smartindent = true
+vim.opt.tabstop         = 4
+vim.opt.softtabstop     = 4
+vim.opt.shiftwidth      = 4
+vim.opt.expandtab       = true
+vim.opt.smartindent     = true
 
 -- disable swap files and backups, enable undo file
-vim.opt.swapfile = false
-vim.opt.backup = false
-vim.opt.undofile = true
+vim.opt.swapfile        = false
+vim.opt.backup          = false
+vim.opt.undofile        = true
 
-vim.scrolloff = 8
-vim.opt.updatetime = 50
+vim.scrolloff           = 8
+vim.opt.updatetime      = 50
 
 -- the leftmost margin
-vim.opt.signcolumn = "yes"
+vim.opt.signcolumn      = "yes"
 
 -- remap leader to space
-vim.g.mapleader = " "
+vim.g.mapleader         = " "
 
 -- escape insert mode with jj
 vim.keymap.set("i", "jj", "<ESC>", { noremap = true, silent = true })
@@ -66,19 +66,8 @@ vim.api.nvim_create_user_command('CONFIG', function()
     vim.cmd('cd ' .. vim.fn.fnamemodify(vim.env.MYVIMRC, ':p:h'))
 end, {})
 
-
 -- PLUGIN HANDLING
 require('plugins')
-
--- WINDOWS SPECIFIC SETTINGS
-if vim.fn.has('win32') or vim.fn.has('win64') then
-    require('windows')
-end
-
--- MAC SPECIFIC SETTINGS
-if vim.fn.has('mac') then
-    require('mac')
-end
 
 -- NEOVIDE GUI SETTINGS
 if vim.g.neovide then

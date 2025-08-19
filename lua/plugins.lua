@@ -15,9 +15,7 @@ call plug#begin('~/AppData/Local/nvim/plugged')
     Plug 'vim-airline/vim-airline-themes'
 
     " helpers
-    Plug 'preservim/nerdcommenter'
-    Plug 'tpope/vim-surround'
-    Plug 'godlygeek/tabular'
+    Plug 'echasnovski/mini.nvim'
 
     " dev icons (download a nerd font from https://www.nerdfonts.com/)
     Plug 'nvim-tree/nvim-web-devicons'
@@ -50,6 +48,9 @@ call plug#end()
 
 -- Theme
 vim.cmd.colorscheme "catppuccin-mocha"
+
+-- MINI PLUGINS SETUP
+require('mini')
 
 -- AIRLINE SETUP
 require('airline')

@@ -11,6 +11,7 @@ Neovim config files are located in:
 Or on Windows:
 
     %LOCALAPPDATA%\nvim
+    $Env:LOCALAPPDATA\nvim
 
 ## Dependencies
 
@@ -132,10 +133,8 @@ Pick a server from the list, press `i` to install it. That's it.
 
 ### Other Plugins
 
-- [Surround](https://github.com/tpope/vim-surround)
-- [Tabular](https://github.com/godlygeek/tabular)
-- [NERD Commenter](https://github.com/preservim/nerdcommenter)
-- [Copilot](https://github.com/github/copilot.vim)
+- [Mini.nvim](https://github.com/echasnovski/mini.nvim) - align, comment, surround, autocomplete
+- [Github Copilot](https://github.com/github/copilot.vim) - ai autocomplete
 
 ## Providers
 

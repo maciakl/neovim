@@ -1,36 +1,37 @@
--- HELP POPUP
--- A reminder popup for my custom key bindings
+-- POPUP
+-- Rewritten to remove the dependency on plenary
 
-local popup = require("plenary.popup")
-local Win_id
+-- Create a pop-up window displaying the lines
+function Pop(lines)
 
--- Show a popup window with the given list of strings
-function ShowPop(opts)
-    local height = 20
-    local width = 40
-    local borderchars = { "─", "│", "─", "│", "╭", "╮", "╯", "╰" }
+    local buf = vim.api.nvim_create_buf(false, true) -- Create a new scratch buffer
+    local ui = vim.api.nvim_list_uis()[1] -- Get the first UI (usually the main UI)
+    local ht = #lines -- Height of the popup
 
-    Win_id = popup.create(opts, {
-        title = "Help",
-        minwidth = width,
-        minheight = height,
-        borderchars = borderchars,
-    })
-    local bufnr = vim.api.nvim_win_get_buf(Win_id)
-    vim.api.nvim_buf_set_keymap(bufnr, "n", "q", "<cmd>lua ClosePop()<CR>", { silent = false })
-    vim.api.nvim_buf_set_keymap(bufnr, "n", "<esc>", "<cmd>lua ClosePop()<CR>", { silent = false })
+    local opts = {
+        relative = 'editor',
+        width = 52,
+        height = ht, -- Height based on the number of lines
+        col = (ui.width - 50) / 2, -- Center the popup horizontally
+        row = (ui.height - ht) / 2, -- Center the popup vertically
+        style = 'minimal',
+        border = 'rounded',
+    }
+
+    local win = vim.api.nvim_open_win(buf, true, opts) -- Open a new window with the buffer
+
+    vim.api.nvim_buf_set_lines(buf, 0, -1, false, lines ) -- Add the lines to the buffer
+
+    -- close the popup with 'q' or <esc>
+    vim.api.nvim_buf_set_keymap(buf, 'n', 'q', '<cmd>lua vim.api.nvim_win_close(' .. win .. ', true)<CR>', { noremap = true, silent = true })
+    vim.api.nvim_buf_set_keymap(buf, 'n', '<esc>', '<cmd>lua vim.api.nvim_win_close(' .. win .. ', true)<CR>', { noremap = true, silent = true })
 end
 
--- Close the popup window
-function ClosePop()
-    vim.api.nvim_win_close(Win_id, true)
-end
-
--- Show my custom key bindings and shortcuts I forget
+-- Show a help popup with keybindings and commands
 function Helpme()
-    ShowPop({
+    Pop({
+        " ",
         " <ld><spc>     ➡ clear search",
-        " <ld>y         ➡ system clipboard",
         " <C-l>         ➡ fix spelling",
         " ",
         " <A-left>      ➡ prev buff",
@@ -49,23 +50,19 @@ function Helpme()
         " <S-j>         ➡ move selection down",
         " <S-k>         ➡ move selection up",
         " ",
-        " cs]}          ➡ change [] to {}",
-        " ysiw)         ➡ surround word with ()",
-        " S)            ➡ surround selection with ()",
-        " ",
-        " <ld>cc        ➡ comment out line",
-        " <ld>cu        ➡ uncomment line",
-        " ",
-        " :Tab /=       ➡ align on =",
+        " ga=           ➡ go align on =",
+        " gcc           ➡ go comment the line",
+        " gc            ➡ go comment region",
+        " saiw)         ➡ go surround (word)",
+        " saiw(         ➡ go surround ( word )",
+        " sd)           ➡ go surround delete ()",
         " ",
         " <C-w>v        ➡ split",
         " <C-w>w        ➡ switch split",
         " <C-w>c        ➡ close split",
-
+        " ",
     })
 end
 
 -- Bind the help popup to <leader>h
-vim.cmd([[
-    nnoremap <leader>h :lua Helpme()<CR>
-]])
+vim.api.nvim_set_keymap('n', '<leader>h', ':lua Helpme()<CR>', { noremap = true, silent = true })

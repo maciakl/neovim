@@ -16,33 +16,42 @@ Or on Windows:
 ## Dependencies
 
 - [Plug](https://github.com/junegunn/vim-plug) - plugin manager
-- [Nerd Font](https://www.nerdfonts.com/) - a patched icon font (eg. Fira)
+- [Nerd Font](https://www.nerdfonts.com/) - a patched icon font (I'm using Fira Code)
 
-- [ripgrep](https://github.com/BurntSushi/ripgrep) - fast grep
-- [fd](https://github.com/sharkdp/fd) - fast file search
+CLI utilities:
+
+- [fd](https://github.com/sharkdp/fd) - fast search
 - [fzf](https://github.com/junegunn/fzf) - fuzzy finder
-- [tree-sitter](https://github.com/tree-sitter/tree-sitter/tree/master/cli) - code parser for hilights
+- [ripgrep](https://github.com/BurntSushi/ripgrep) - fast grep
+- [tree-sitter](https://github.com/tree-sitter/tree-sitter/tree/master/cli) - code parser for highlights
 
 On windows use `scoop` to install CLI dependencies.
 
 Run:
 
-    scoop install ripgrep
     scoop install fd
     scoop install fzf
+    scoop install gzip
     scoop install llvm
     scoop install mingw
     scoop install python3
-    scoop install gzip
+    scoop install ripgrep
+    scoop install tree-sitter
     scoop install unzip
     scoop install wget
-    scoop install tree-sitter
 
 Don't use `winget` - neovim does not like the way it symlinks `rg` and `fd`.
 
 ## Initial Setup
 
-First, get the [Plug](https://github.com/junegunn/vim-plug) plugin manager installed.
+Clone this repository to your Neovim config directory:
+
+```bash
+git clone git@github.com:maciakl/neovim.git ~/.config/nvim         # mac/linux
+git clone git@github.com:maciakl/neovim.git $Env:LOCALAPPDATA\nvim # windows
+```
+
+Next, get the [Plug](https://github.com/junegunn/vim-plug) plugin manager installed.
 
 On Mac/Unix/Linux:
 
@@ -54,7 +63,7 @@ On Windows:
     iwr -useb https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim |`
     ni "$(@($env:XDG_DATA_HOME, $env:LOCALAPPDATA)[$null -eq $env:XDG_DATA_HOME])/nvim-data/site/autoload/plug.vim" -Force
 
-First time opening neovim, run:
+Open `nvim` and run:
 
     :PlugInstall
     :Copilot setup
@@ -84,6 +93,7 @@ or on Mac:
 
     brew install neovide
 
+### Windows Context Menu
 
 On Windows you can set up right click context menu:
 
@@ -95,6 +105,8 @@ On Windows you can set up right click context menu:
 
     [HKEY_CLASSES_ROOT\*\shell\Neovim\command]
     @="\"C:\\Program Files\\Neovide\\neovide.exe\" \"%1\""
+
+Note, this only works for the legacy context menu, not the Windows 11 one.
 
 
 ## Plugins

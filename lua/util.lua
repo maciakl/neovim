@@ -1,6 +1,5 @@
 -- POPUP
 -- Rewritten to remove the dependency on plenary
-
 -- Create a pop-up window displaying the lines
 function Pop(lines)
 

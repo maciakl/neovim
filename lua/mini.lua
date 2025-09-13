@@ -14,3 +14,6 @@ require('mini.align').setup()
 -- Replaces vim.cmp
 require('mini.completion').setup()
 
+-- Autopairs
+require('mini.pairs').setup()
+

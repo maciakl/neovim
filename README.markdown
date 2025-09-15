@@ -129,15 +129,17 @@ Following plugins are in use.
 
 ### Helper Functions
 
-- [Mini.nvim](https://github.com/echasnovski/mini.nvim) - align, comment, surround, autocomplete
+- [Mini.nvim](https://github.com/echasnovski/mini.nvim) - align, comment, surround, autopairs, autocomplete
 
 ### LSP
+
+This is the config-free LSP setup:
 
 - [Mason](https://github.com/mason-org/mason.nvim) - language server manager/installer
 - [Mason LSP Config](https://github.com/mason-org/mason-lspconfig.nvim) - bridge between Mason and LSP Config
 - [LSP Config](https://github.com/neovim/nvim-lspconfig) - provides config files for all language servers
 
-To instal a server run `:Mason`, pick a server from the list, press `i` to install it.
+To instal a server run `:Mason`, pick a server from the list, press `i` to install it. That's it.
 
 ### Other Plugins
 

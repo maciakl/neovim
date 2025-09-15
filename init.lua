@@ -55,6 +55,14 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 vim.keymap.set("n", "<A-left>", ":bprev<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<A-right>", ":bnext<CR>", { noremap = true, silent = true })
 
+-- copy to system clipboard
+vim.keymap.set("n", "<leader>y", '"+y', { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>yy", '"+yy', { noremap = true, silent = true })
+vim.keymap.set("v", "<leader>y", '"+y', { noremap = true, silent = true })
+
+-- paste from system clipboard
+vim.keymap.set("n", "<leader>p", '"+p', { noremap = true, silent = true })
+
 -- changing the file types
 vim.api.nvim_create_user_command('DOS', function() vim.cmd('set ff=dos') end, {})
 vim.api.nvim_create_user_command('UNIX', function() vim.cmd('set ff=unix') end, {})

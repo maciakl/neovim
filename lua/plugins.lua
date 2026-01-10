@@ -1,11 +1,18 @@
 -- PLUGIN CONFIG FILE
 -- Install Plug from https://github.com/junegunn/vim-plug
 
+-- SETTING THE PATH FOR PLUGGED PLUGINS
+if vim.fn.has('win32') or vim.fn.has('win64') then
+    vim.g.plugpath = '~/AppData/Local/nvim/plugged'
+else
+    vim.g.plugpath = '~/.config/nvim/plugged'
+end
+
 -- Plug Block
 ------------------------------------------------------------------------------
 vim.cmd([[
 
-call plug#begin('~/AppData/Local/nvim/plugged')
+call plug#begin(plugpath)
 
     " color scheme
     Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
@@ -25,7 +32,7 @@ call plug#begin('~/AppData/Local/nvim/plugged')
 
     " fuzzy finder
     Plug 'nvim-lua/plenary.nvim'
-    Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.8' }
+    Plug 'nvim-telescope/telescope.nvim'
 
     " highlighting
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}

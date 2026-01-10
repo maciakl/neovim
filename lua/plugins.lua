@@ -2,12 +2,11 @@
 -- Install Plug from https://github.com/junegunn/vim-plug
 
 -- SETTING THE PATH FOR PLUGGED PLUGINS
-if vim.fn.has('win32') or vim.fn.has('win64') then
+if vim.fn.has('win32') == 1 or vim.fn.has('win64') == 1 then
     vim.g.plugpath = '~/AppData/Local/nvim/plugged'
 else
     vim.g.plugpath = '~/.config/nvim/plugged'
 end
-
 -- Plug Block
 ------------------------------------------------------------------------------
 vim.cmd([[

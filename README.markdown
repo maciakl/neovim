@@ -42,23 +42,42 @@ On Mac use `brew`:
 
 Clone this repository to your Neovim config directory:
 
+### Mac/Linux
+
 ```bash
-git clone git@github.com:maciakl/neovim.git ~/.config/nvim         # mac/linux
-git clone git@github.com:maciakl/neovim.git $Env:LOCALAPPDATA\nvim # windows
+git clone git@github.com:maciakl/neovim.git ~/.config/nvim
 ```
 
-Then run `nvim` for the first time.
+### Windows
 
-On the first run, Neovim will download and install the required plugins then close itself. The plugins are installed in:
+```bash
+git clone git@github.com:maciakl/neovim.git $Env:LOCALAPPDATA\nvim
+```
 
-- On Mac/Unix/Linux: `~/.config/nvim/plugged/`
-- On Windows: `%LOCALAPPDATA%\nvim\plugged\`
+### Post Config
+
+Run `nvim` for the first time.
+
+On the first run, Neovim will download and install the required plugins then close itself.
 
 Upon re-opening the editor run:
 
     :Copilot setup
 
-## Mac Terminal
+### Maintenance
+
+For easy maintenance, plugins are installed in:
+
+- On Mac/Unix/Linux: `~/.config/nvim/plugged/`
+- On Windows: `%LOCALAPPDATA%\nvim\plugged\`
+
+To update plugins, run:
+
+    :PlugUpdate
+
+## Terminal Setup
+
+### Ghostty on Mac
 
 Mac has no Alt key and macOS eats bindings that use the Option key if you are using neovim in the terminal. You have to tell your terminal to treat option as alt.
 
@@ -68,6 +87,22 @@ If you ae using Ghostty put the following lines in `~/.config/ghostty/config`
     keybind = alt+left=unbind
     keybind = alt+right=unbind
 
+### Windows Terminal
+
+In Windows terminal <kbd>Ctrl</kbd>+<kbd>V</kbd> is bound to the *Paste* action breaking the vim block selection. To fix this:
+
+- Press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>,</kbd> to open the `settings.json` config file in the system default text editor
+- Find the `keybindings` array under `actions`
+- Comment out or change the the keybinding line in the folloiwing section:
+
+```json
+{
+     "id": "User.paste",
+     "keys": "ctrl+v"
+},
+```
+
+This should take effect immediately withoug having to re-start the terminal app.
 
 ## Plugins
 

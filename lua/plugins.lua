@@ -26,7 +26,7 @@ call plug#begin(plugpath)
     Plug 'vim-airline/vim-airline-themes'
 
     " helpers
-    Plug 'echasnovski/mini.nvim'
+    Plug 'nvim-mini/mini.nvim'
 
     " dev icons (download a nerd font from https://www.nerdfonts.com/)
     Plug 'nvim-tree/nvim-web-devicons'

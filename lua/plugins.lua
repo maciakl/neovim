@@ -1,12 +1,17 @@
 -- PLUGIN CONFIG FILE
 -- Install Plug from https://github.com/junegunn/vim-plug
 
+
+-- Install plug if not already installed
+require('plug')
+
 -- SETTING THE PATH FOR PLUGGED PLUGINS
 if vim.fn.has('win32') or vim.fn.has('win64') then
     vim.g.plugpath = '~/AppData/Local/nvim/plugged'
 else
     vim.g.plugpath = '~/.config/nvim/plugged'
 end
+
 
 -- Plug Block
 ------------------------------------------------------------------------------
@@ -49,6 +54,13 @@ call plug#end()
 ]])
 ------------------------------------------------------------------------------
 
+
+-- check if the plugin directory exists and if not run :PlugInstall
+-- then quit nvim to reload with the plugins installed
+if vim.fn.isdirectory(vim.fn.expand(vim.g.plugpath)) == 0 then
+    vim.cmd('PlugInstall --sync | qa')
+    vim.cmd('qa')
+end
 
 -- PLUGIN SPECIFIC CONFIGURATIONS
 -- These are kept in separate files for better organization

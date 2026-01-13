@@ -152,3 +152,9 @@ Install language providers:
 Check health:
 
     :checkhealth
+
+If the automated Plug install fails, you can [install it manually](https://github.com/maciakl/neovim/wiki/Install-Plug-Manually).
+
+## GUI
+
+If you want a GUI, [see here](https://github.com/maciakl/neovim/wiki/Using-a-GUI).

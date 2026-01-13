@@ -2,7 +2,7 @@
 -- Install Plug from https://github.com/junegunn/vim-plug
 
 -- this is system dependent
-if vim.fn.has('win32') or vim.fn.has('win64') then
+if vim.fn.has('win32') == 1 or vim.fn.has('win64') == 1 then
     -- check if %LOCALAPPDATA%\nvim-data\site\autoload\plug.vim exists
     -- if it doesn't, download it from https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
     -- and save it to that location

@@ -54,6 +54,7 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 -- quick buffer switching
 vim.keymap.set("n", "<A-left>", ":bprev<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<A-right>", ":bnext<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<A-k>", ":bw!<CR>", { noremap = true, silent = true })
 
 -- copy to system clipboard
 vim.keymap.set("n", "<leader>y", '"+y', { noremap = true, silent = true })

@@ -15,8 +15,9 @@ Or on Windows:
 
 ## Dependencies
 
-- [Plug](https://github.com/junegunn/vim-plug) - plugin manager
+- [Plug](https://github.com/junegunn/vim-plug) - plugin manager (auto downnloaded on first run)
 - [Nerd Font](https://www.nerdfonts.com/) - a patched icon font (I'm using Fira Code)
+- [Node.js](https://nodejs.org/) - required for LSP plugins
 
 CLI utilities:
 
@@ -24,7 +25,7 @@ CLI utilities:
 - [fzf](https://github.com/junegunn/fzf) - fuzzy finder
 - [ripgrep](https://github.com/BurntSushi/ripgrep) - fast grep
 - [tree-sitter](https://github.com/tree-sitter/tree-sitter/tree/master/cli) - code parser for highlights
-- [node.js](https://nodejs.org/) - required for LSP plugins
+
 
 On windows use `scoop` to install CLI dependencies.
 
@@ -35,7 +36,7 @@ Run:
 
 On Mac use `brew`:
 
-    brew install fd fzf ripgrep tree-sitter nodejs
+    brew install fd fzf ripgrep tree-sitter
 
 
 ## Initial Setup
@@ -68,8 +69,19 @@ Upon re-opening the editor run:
 
 For easy maintenance, plugins are installed in:
 
-- On Mac/Unix/Linux: `~/.config/nvim/plugged/`
-- On Windows: `%LOCALAPPDATA%\nvim\plugged\`
+#### Mac/Unix/Linux: 
+
+```bash
+~/.config/nvim/plugged/
+```
+
+#### Windows
+
+```bash
+%LOCALAPPDATA%\nvim\plugged\
+```
+
+#### Plugin Updates
 
 To update plugins, run:
 
@@ -146,6 +158,52 @@ Install language providers:
 
     npm install neovim -g
     pip install neovim
+
+## Key Bindings
+
+### Basic
+
+- <kbd>leader</kbd>, <kbd>h</kbd> - display key binding cheat-sheet
+- <kbd>leader</kbd>, <kbd>space</kbd> - clear search highlights
+- <kbd>Ctrl</kbd>+<kbd>L</kbd> - fix last spelling error
+
+### Buffer Navigation
+
+- <kbd>Alt</kbd>+<kbd>Left</kbd> - previous buffer
+- <kbd>Alt</kbd>+<kbd>Right</kbd> - next buffer
+- <kbd>Alt</kbd>+<kbd>k</kbd> - close buffer
+- <kbd>Alt</kbd>+<kbd>Up</kbd> - open buffer picker
+- <kbd>Alt</kbd>+<kbd>Down</kbd> - file picker
+
+### Screen Navigation
+
+- <kbd>Ctrl</kbd>+<kbd>u</kbd> - move up one screen
+- <kbd>Ctrl</kbd>+<kbd>d</kbd> - move down one screen
+- <kbd>}</kbd> - next paragraph
+
+### LSP and Code
+
+- <kbd>Alt</kbd>+<kbd>\\</kbd> - document symbol picker
+- <kbd>Ctrl</kbd>+<kbd>\\</kbd> - project symbol picker
+- <kbd>g</kbd>, <kbd>d</kbd> - go to definition
+- <kbd>Ctrl</kbd>+<kbd>o</kbd> - jump back to last location
+
+### Splits
+
+- <kbd>Ctrl</kbd>+<kbd>w</kbd>, <kbd>v</kbd> - vertical split 
+- <kbd>Ctrl</kbd>+<kbd>w</kbd>, <kbd>w</kbd> - switch split
+- <kbd>Ctrl</kbd>+<kbd>w</kbd>, <kbd>c</kbd> - close split
+
+
+### Other
+
+- <kbd>g</kbd>, <kbd>a</kbd>, <kbd>=</kbd> - align selection on = (or any other symbol)
+- <kbd>g</kbd>, <kbd>c</kbd>, <kbd>c</kbd> - comment out current line
+- <kbd>g</kbd>, <kbd>c</kbd> - comment out selection
+- <kbd>s</kbd>, <kbd>a</kbd>, <kbd>i</kbd>, <kbd>w</kbd>, <kbd>(</kbd> - surround add internal (word)
+- <kbd>s</kbd>, <kbd>a</kbd>, <kbd>i</kbd>, <kbd>w</kbd>, <kbd>)</kbd> - surround add internal ( word )
+- <kbd>s</kbd>, <kbd>d</kbd>, <kbd>(</kbd> - surround delete ()
+
 
 ## Troubleshooting
 

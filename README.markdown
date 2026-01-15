@@ -6,12 +6,21 @@ My quick and dirty Neovim setup circa 2025.
 
 Neovim config files are located in:
 
-    ~/.config/nvim/
+```bash
+~/.config/nvim/
+```
 
 Or on Windows:
 
-    %LOCALAPPDATA%\nvim
-    $Env:LOCALAPPDATA\nvim
+```cmd
+%LOCALAPPDATA%\nvim
+```
+
+Powershell:
+
+```powershell
+$Env:LOCALAPPDATA\nvim
+```
 
 ## Dependencies
 
@@ -51,7 +60,7 @@ git clone git@github.com:maciakl/neovim.git ~/.config/nvim
 
 ### Windows
 
-```bash
+```powershell
 git clone git@github.com:maciakl/neovim.git $Env:LOCALAPPDATA\nvim
 ```
 
@@ -77,7 +86,7 @@ For easy maintenance, plugins are installed in:
 
 #### Windows
 
-```bash
+```powershell
 %LOCALAPPDATA%\nvim\plugged\
 ```
 
@@ -169,11 +178,11 @@ Install language providers:
 
 ### Buffer Navigation
 
-- <kbd>Alt</kbd>+<kbd>Left</kbd> - previous buffer
-- <kbd>Alt</kbd>+<kbd>Right</kbd> - next buffer
+- <kbd>Alt</kbd>+<kbd>←</kbd> - previous buffer
+- <kbd>Alt</kbd>+<kbd>→</kbd> - next buffer
 - <kbd>Alt</kbd>+<kbd>k</kbd> - close buffer
-- <kbd>Alt</kbd>+<kbd>Up</kbd> - open buffer picker
-- <kbd>Alt</kbd>+<kbd>Down</kbd> - file picker
+- <kbd>Alt</kbd>+<kbd>↑</kbd> - open buffer picker
+- <kbd>Alt</kbd>+<kbd>↓</kbd> - file picker
 
 ### Screen Navigation
 

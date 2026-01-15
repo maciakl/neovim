@@ -184,34 +184,10 @@ Install language providers:
 - <kbd>Alt</kbd>+<kbd>↑</kbd> - open buffer picker
 - <kbd>Alt</kbd>+<kbd>↓</kbd> - file picker
 
-### Screen Navigation
-
-- <kbd>Ctrl</kbd>+<kbd>u</kbd> - move up one screen
-- <kbd>Ctrl</kbd>+<kbd>d</kbd> - move down one screen
-- <kbd>}</kbd> - next paragraph
-
-### LSP and Code
+### LSP
 
 - <kbd>Alt</kbd>+<kbd>\\</kbd> - document symbol picker
 - <kbd>Ctrl</kbd>+<kbd>\\</kbd> - project symbol picker
-- <kbd>g</kbd>, <kbd>d</kbd> - go to definition
-- <kbd>Ctrl</kbd>+<kbd>o</kbd> - jump back to last location
-
-### Splits
-
-- <kbd>Ctrl</kbd>+<kbd>w</kbd>, <kbd>v</kbd> - vertical split 
-- <kbd>Ctrl</kbd>+<kbd>w</kbd>, <kbd>w</kbd> - switch split
-- <kbd>Ctrl</kbd>+<kbd>w</kbd>, <kbd>c</kbd> - close split
-
-
-### Other
-
-- <kbd>g</kbd>, <kbd>a</kbd>, <kbd>=</kbd> - align selection on = (or any other symbol)
-- <kbd>g</kbd>, <kbd>c</kbd>, <kbd>c</kbd> - comment out current line
-- <kbd>g</kbd>, <kbd>c</kbd> - comment out selection
-- <kbd>s</kbd>, <kbd>a</kbd>, <kbd>i</kbd>, <kbd>w</kbd>, <kbd>(</kbd> - surround add internal (word)
-- <kbd>s</kbd>, <kbd>a</kbd>, <kbd>i</kbd>, <kbd>w</kbd>, <kbd>)</kbd> - surround add internal ( word )
-- <kbd>s</kbd>, <kbd>d</kbd>, <kbd>(</kbd> - surround delete ()
 
 
 ## Troubleshooting

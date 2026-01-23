@@ -17,3 +17,6 @@ require('mini.completion').setup()
 -- Autopairs
 require('mini.pairs').setup()
 
+-- File Browser
+require('mini.files').setup()
+

@@ -69,6 +69,15 @@ vim.api.nvim_create_user_command('DOS', function() vim.cmd('set ff=dos') end, {}
 vim.api.nvim_create_user_command('UNIX', function() vim.cmd('set ff=unix') end, {})
 vim.api.nvim_create_user_command('MAC', function() vim.cmd('set ff=mac') end, {})
 
+-- auto close the netrw buffer after opening a file
+vim.g.netrw_browse_split = 0
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = "netrw",
+    callback = function()
+        vim.opt_local.bufhidden = "wipe"
+    end,
+})
+
 -- edit the init.lua file
 vim.api.nvim_create_user_command('CONFIG', function()
     vim.cmd('edit ' .. vim.env.MYVIMRC)

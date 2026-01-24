@@ -145,7 +145,7 @@ Following plugins are in use.
 
 ### Helper Functions
 
-- [Mini.nvim](https://github.com/echasnovski/mini.nvim) - align, comment, surround, autopairs, autocomplete
+- [Mini.nvim](https://github.com/echasnovski/mini.nvim) - align, comment, surround, autopairs, autocomplete, file picker
 
 ### LSP
 
@@ -168,12 +168,12 @@ Install language providers:
     npm install neovim -g
     pip install neovim
 
-## Key Bindings
+## Custom Key Bindings
 
 ### Basic
 
-- <kbd>leader</kbd>, <kbd>h</kbd> - display key binding cheat-sheet
-- <kbd>leader</kbd>, <kbd>space</kbd> - clear search highlights
+- <kbd>ld</kbd>,<kbd>h</kbd> - display key binding cheat-sheet
+- <kbd>ld</kbd>,<kbd>space</kbd> - clear search highlights
 - <kbd>Ctrl</kbd>+<kbd>L</kbd> - fix last spelling error
 
 ### Buffer Navigation
@@ -186,15 +186,22 @@ Install language providers:
 
 ### Splits
 
-- <kbd>leader</kbd>,<kbd>s</kbd>,<kbd>n</kbd> - new split to the right
-- <kbd>leader</kbd>,<kbd>s</kbd>,<kbd>c</kbd> - close current split
-- <kbd>leader</kbd>,<kbd>s</kbd>,<kbd>s</kbd> - switch splits
+- <kbd>ld</kbd>,<kbd>s</kbd>,<kbd>n</kbd> - new split to the right
+- <kbd>ld</kbd>,<kbd>s</kbd>,<kbd>c</kbd> - close current split
+- <kbd>ld</kbd>,<kbd>s</kbd>,<kbd>s</kbd> - switch splits
 
 ### LSP
 
 - <kbd>Alt</kbd>+<kbd>\\</kbd> - document symbol picker
 - <kbd>Ctrl</kbd>+<kbd>\\</kbd> - project symbol picker
+- <kbd>Alt</kbd>+<kbd>i</kbd> - show hover info
+- <kbd>g</kbd>,<kbd>d</kbd> - go to definition
+- <kbd>ld</kbd>,<kbd>g</kbd>,<kbd>d</kbd> - open definition in a split
+  
+### Commands
 
+- `:CONFIG` - open `init.lua`
+- `:DOS`, `:UNIX`, `:MAC` - change newline type for current buffer
 
 ## Troubleshooting
 

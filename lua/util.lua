@@ -62,9 +62,9 @@ function Helpme()
         " saiw(         ➡ surround add internal ( word )",
         " sd)           ➡ surround delete ()",
         " ",
-        " <C-w>v        ➡ split",
-        " <C-w>w        ➡ switch split",
-        " <C-w>c        ➡ close split",
+        " <ld>sn        ➡ split new",
+        " <ld>sc        ➡ split close",
+        " <ld>ss        ➡ split switch",
         " ",
     })
 end

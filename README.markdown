@@ -184,6 +184,12 @@ Install language providers:
 - <kbd>Alt</kbd>+<kbd>↑</kbd> - open buffer picker
 - <kbd>Alt</kbd>+<kbd>↓</kbd> - file picker
 
+### Splits
+
+- <kbd>leader</kbd>,<kbd>s</kbd>,<kbd>n</kbd> - new split to the right
+- <kbd>leader</kbd>,<kbd>s</kbd>,<kbd>c</kbd> - close current split
+- <kbd>leader</kbd>,<kbd>s</kbd>,<kbd>s</kbd> - switch splits
+
 ### LSP
 
 - <kbd>Alt</kbd>+<kbd>\\</kbd> - document symbol picker

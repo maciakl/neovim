@@ -64,6 +64,13 @@ vim.keymap.set("v", "<leader>y", '"+y', { noremap = true, silent = true })
 -- paste from system clipboard
 vim.keymap.set("n", "<leader>p", '"+p', { noremap = true, silent = true })
 
+-- easy splits
+vim.opt.splitright = true
+vim.keymap.set("n", "<leader>sn", ":vnew<CR>", { noremap = true, silent = true }) -- split open
+vim.keymap.set("n", "<leader>so", ":vsplit<CR>", { noremap = true, silent = true }) -- split open
+vim.keymap.set("n", "<leader>sc", "<C-w>c", { noremap = true, silent = true }) -- split close
+vim.keymap.set("n", "<leader>ss", "<C-w>w", { noremap = true, silent = true }) -- split switch
+
 -- changing the file types
 vim.api.nvim_create_user_command('DOS', function() vim.cmd('set ff=dos') end, {})
 vim.api.nvim_create_user_command('UNIX', function() vim.cmd('set ff=unix') end, {})

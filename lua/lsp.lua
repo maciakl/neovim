@@ -9,10 +9,13 @@ require("mason-lspconfig").setup()
 -- Enable inline error messages
 vim.diagnostic.config({ virtual_text = true })
 
--- K to show function signature
-vim.keymap.set('n', 'K', '<cmd>lua vim.lsp.buf.hover()<cr>')
--- gd to go to definition
+-- <A-i> to show function signature
+vim.keymap.set('n', '<A-i>', '<cmd>lua vim.lsp.buf.hover()<cr>')
+
+-- gd to go to definition <ld>gd show definition in a split
 vim.keymap.set('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<cr>')
+vim.keymap.set('n', '<leader>gd', '<cmd>vsplit | lua vim.lsp.buf.definition()<cr>')
+
 
 -- format buffer with LSP
 vim.keymap.set('n', '<leader>f', '<cmd>lua vim.lsp.buf.format()<cr>')

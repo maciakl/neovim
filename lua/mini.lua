@@ -20,3 +20,5 @@ require('mini.pairs').setup()
 -- File Browser
 require('mini.files').setup()
 
+-- Indent Line
+require('mini.indentscope').setup()

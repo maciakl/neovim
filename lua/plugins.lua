@@ -22,23 +22,23 @@ call plug#begin(plugpath)
     Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 
     " status bar
-    Plug 'vim-airline/vim-airline'
-    Plug 'vim-airline/vim-airline-themes'
+    Plug 'akinsho/bufferline.nvim', { 'tag': '*' }
+    Plug 'nvim-lualine/lualine.nvim'
+
+    " dev icons (download font from nerdfonts.com)
+    Plug 'nvim-tree/nvim-web-devicons'
 
     " helpers
     Plug 'nvim-mini/mini.nvim'
 
-    " dev icons (download a nerd font from https://www.nerdfonts.com/)
-    Plug 'nvim-tree/nvim-web-devicons'
-
     " copilot
     Plug 'github/copilot.vim'
 
-    " fuzzy finder
+    " fuzzy finder -- navigation
     Plug 'nvim-lua/plenary.nvim'
     Plug 'nvim-telescope/telescope.nvim'
 
-    " highlighting
+    " syntax highlighting
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
     "================= LSP =================
@@ -64,19 +64,16 @@ end
 -- PLUGIN SPECIFIC CONFIGURATIONS
 -- These are kept in separate files for better organization
 
--- Theme
-vim.cmd.colorscheme "catppuccin-mocha"
+-- UI CONFIGURATION
+require('ui')
 
--- MINI PLUGINS SETUP
+-- MINI PLUGINS HELPER SETUP
 require('mini')
-
--- AIRLINE SETUP
-require('airline')
 
 -- TELESCOPE CONFIG
 require('telescope')
 
--- TREESITTER SETUP
+-- TREE-SITTER SETUP
 require('treesitter')
 
 -- LSP CONFIG SETUP

@@ -17,7 +17,7 @@ require('mini.completion').setup()
 -- Autopairs
 require('mini.pairs').setup()
 
--- File Browser
+-- File Browser (replaces netrw)
 require('mini.files').setup()
 
 -- Indent Line

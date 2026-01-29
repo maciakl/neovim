@@ -196,8 +196,10 @@ Install language providers:
 - <kbd>Alt</kbd>+<kbd>\\</kbd> - document symbol picker
 - <kbd>Ctrl</kbd>+<kbd>\\</kbd> - project symbol picker
 - <kbd>Alt</kbd>+<kbd>i</kbd> - show hover info
+- <kbd>Alt</kbd>+<kbd>o</kbd> - show error info
 - <kbd>g</kbd>,<kbd>d</kbd> - go to definition
 - <kbd>ld</kbd>,<kbd>g</kbd>,<kbd>d</kbd> - open definition in a split
+- <kbd>ld</kbd>,<kbd>f</kbd> - format buffer
   
 ### Commands
 

@@ -43,7 +43,7 @@ vim.keymap.set("i", "jj", "<ESC>", { noremap = true, silent = true })
 -- clear search highlights with <leader><space>
 vim.keymap.set("n", "<leader><space>", ":nohlsearch<CR>", { noremap = true, silent = true })
 
--- automatically jump to last misspelled word and correct it
+-- automatically jump to last misspelled word and correct it with Ctrl-l
 vim.keymap.set("n", "<C-l>", "[sz=", { noremap = true, silent = true })
 vim.keymap.set("i", "<C-l>", "<ESC>[sz=", { noremap = true, silent = true })
 
@@ -51,7 +51,7 @@ vim.keymap.set("i", "<C-l>", "<ESC>[sz=", { noremap = true, silent = true })
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
--- quick buffer switching
+-- quick buffer switching with Alt-Arrows and buffer closing with Alt-k
 vim.keymap.set("n", "<A-left>", ":bprev<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<A-right>", ":bnext<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<A-k>", ":bw!<CR>", { noremap = true, silent = true })
@@ -66,8 +66,7 @@ vim.keymap.set("n", "<leader>p", '"+p', { noremap = true, silent = true })
 
 -- easy splits
 vim.opt.splitright = true
-vim.keymap.set("n", "<leader>sn", ":vnew<CR>", { noremap = true, silent = true }) -- split open
-vim.keymap.set("n", "<leader>so", ":vsplit<CR>", { noremap = true, silent = true }) -- split open
+vim.keymap.set("n", "<leader>sn", ":vnew<CR>", { noremap = true, silent = true }) -- split new
 vim.keymap.set("n", "<leader>sc", "<C-w>c", { noremap = true, silent = true }) -- split close
 vim.keymap.set("n", "<leader>ss", "<C-w>w", { noremap = true, silent = true }) -- split switch
 

@@ -81,14 +81,9 @@ vim.api.nvim_create_user_command('CONFIG', function()
     vim.cmd('edit ' .. vim.env.MYVIMRC)
     vim.cmd('cd ' .. vim.fn.fnamemodify(vim.env.MYVIMRC, ':p:h'))
 end, {})
---
--- Various helper functions and utilities
+
+-- My custom utility functions
 require('util')
 
 -- PLUGIN HANDLING
 require('plugins')
-
--- NEOVIDE GUI SETTINGS
-if vim.g.neovide then
-    require('neovide');
-end

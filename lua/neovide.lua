@@ -1,5 +1,11 @@
 -- NEOVIDE GUI SETTINGS
--- these settings are only used in Neovide front end
+-- These settings are only used in Neovide front end.
+-- To enable put this in init.lua:
+--
+--    if vim.g.neovide then
+--        require('neovide');
+--    end
+--
 
 vim.o.guifont = "FiraCode Nerd Font:h14"
 vim.g.neovide_padding_top = 0

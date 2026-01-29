@@ -65,16 +65,21 @@ end
 -- These are kept in separate files for better organization
 
 -- UI CONFIGURATION
+-- theme, statusline, bufferline, etc.
 require('ui')
 
--- MINI PLUGINS HELPER SETUP
+-- MINI PLUGINS
+-- Helper plugins to surround, comment, align, etc..
 require('mini')
 
 -- TELESCOPE CONFIG
+-- Fuzzy finder, file/buffer picker
 require('telescope')
 
 -- TREE-SITTER SETUP
+-- Syntax highlighting
 require('treesitter')
 
--- LSP CONFIG SETUP
+-- LSP SETUP
+-- Zero config LSP
 require('lsp')

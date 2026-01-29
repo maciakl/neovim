@@ -18,7 +18,11 @@ require('mini.completion').setup()
 require('mini.pairs').setup()
 
 -- File Browser (replaces netrw)
-require('mini.files').setup()
+require('mini.files').setup({
+    mappings = {
+        go_in_plus = "<CR>", -- open files with enter
+    }
+})
 
 -- Indent Line
 require('mini.indentscope').setup()

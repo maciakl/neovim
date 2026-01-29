@@ -132,8 +132,9 @@ Following plugins are in use.
 ### Theme and UI
 
 - [Catppuccin Theme](https://github.com/catppuccin/nvim) - color scheme
-- [Airline](https://github.com/vim-airline/vim-airline) - status bar
 - [Dev-Icons](https://github.com/nvim-tree/nvim-web-devicons) - icons
+- [Lualine](https://github.com/nvim-lualine/lualine.nvim) - status line
+- [Bufferline](https://github.com/akinsho/bufferline.nvim) - buffer line
 
 ### Code Highlighting
 

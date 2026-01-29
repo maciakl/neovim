@@ -11,6 +11,7 @@ vim.diagnostic.config({ virtual_text = true })
 
 -- <A-i> to show function signature
 vim.keymap.set('n', '<A-i>', '<cmd>lua vim.lsp.buf.hover()<cr>')
+vim.keymap.set('n', '<A-o>', '<cmd>lua vim.diagnostic.open_float()<cr>')
 
 -- gd to go to definition <ld>gd show definition in a split
 vim.keymap.set('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<cr>')

@@ -1,4 +1,4 @@
--- My Neovim setup cica 2025
+-- My Neovim setup cica 2026
 
 -- basics
 vim.opt.showmatch       = true
@@ -37,38 +37,41 @@ vim.opt.signcolumn      = "yes"
 -- remap leader to space
 vim.g.mapleader         = " "
 
+-- standard opts for key-mappings to avoid repetition
+local opts = { noremap = true, silent = true }
+
 -- escape insert mode with jj
-vim.keymap.set("i", "jj", "<ESC>", { noremap = true, silent = true })
+vim.keymap.set("i", "jj", "<ESC>", opts)
 
 -- clear search highlights with <leader><space>
-vim.keymap.set("n", "<leader><space>", ":nohlsearch<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<leader><space>", ":nohlsearch<CR>", opts)
 
 -- automatically jump to last misspelled word and correct it with Ctrl-l
-vim.keymap.set("n", "<C-l>", "[sz=", { noremap = true, silent = true })
-vim.keymap.set("i", "<C-l>", "<ESC>[sz=", { noremap = true, silent = true })
+vim.keymap.set("n", "<C-l>", "[sz=", opts)
+vim.keymap.set("i", "<C-l>", "<ESC>[sz=", opts)
 
 -- move visually selected block with Shift-J and Shift-K
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 -- quick buffer switching with Alt-Arrows and buffer closing with Alt-k
-vim.keymap.set("n", "<A-left>", ":bprev<CR>", { noremap = true, silent = true })
-vim.keymap.set("n", "<A-right>", ":bnext<CR>", { noremap = true, silent = true })
-vim.keymap.set("n", "<A-k>", ":bw!<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<A-left>", ":bprev<CR>", opts)
+vim.keymap.set("n", "<A-right>", ":bnext<CR>", opts)
+vim.keymap.set("n", "<A-k>", ":bw!<CR>", opts)
 
 -- copy to system clipboard
-vim.keymap.set("n", "<leader>y", '"+y', { noremap = true, silent = true })
-vim.keymap.set("n", "<leader>yy", '"+yy', { noremap = true, silent = true })
-vim.keymap.set("v", "<leader>y", '"+y', { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>y", '"+y', opts)
+vim.keymap.set("n", "<leader>yy", '"+yy', opts)
+vim.keymap.set("v", "<leader>y", '"+y', opts)
 
 -- paste from system clipboard
-vim.keymap.set("n", "<leader>p", '"+p', { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>p", '"+p', opts)
 
 -- easy splits
 vim.opt.splitright = true
-vim.keymap.set("n", "<leader>sn", ":vnew<CR>", { noremap = true, silent = true }) -- split new
-vim.keymap.set("n", "<leader>sc", "<C-w>c", { noremap = true, silent = true }) -- split close
-vim.keymap.set("n", "<leader>ss", "<C-w>w", { noremap = true, silent = true }) -- split switch
+vim.keymap.set("n", "<leader>sn", ":vnew<CR>", opts) -- split new
+vim.keymap.set("n", "<leader>sc", "<C-w>c", opts) -- split close
+vim.keymap.set("n", "<leader>ss", "<C-w>w", opts) -- split switch
 
 -- changing the file types
 vim.api.nvim_create_user_command('DOS', function() vim.cmd('set ff=dos') end, {})

@@ -5,17 +5,15 @@
 --	scoop install ripgrep
 --	scoop install fzf
 
-vim.cmd([[
-    " standard binding
-	nnoremap <A-g> <cmd>Telescope live_grep<cr>
+local opts = { noremap = true, silent = true }
 
-    " LSP Dependent Bindings to show symbols
-    nnoremap <C-\> <cmd>Telescope lsp_workspace_symbols<cr>
-    nnoremap <A-\> <cmd>Telescope lsp_document_symbols<cr>
+-- Live Grep with Alt-g
+vim.api.nvim_set_keymap("n", "<A-g>", "<cmd>Telescope live_grep<cr>", opts)
 
-    nnoremap <leader>fd <cmd>Telescope lsp_definitions<cr>
+-- LSP Dependent Bindings to show symbols with Alt-\ (file) and Ctrl-\ (workspace)
+vim.api.nvim_set_keymap("n", "<A-\\>", "<cmd>Telescope lsp_document_symbols<cr>", opts)
+vim.api.nvim_set_keymap("n", "<C-\\>", "<cmd>Telescope lsp_workspace_symbols<cr>", opts)
 
-    " Set Alt-Up and Alt-Down to open buffers and find files
-    nnoremap <A-Up> <cmd>Telescope buffers<cr>
-    nnoremap <A-Down> <cmd>Telescope find_files<cr>
-]])
+-- Browse project files with Alt-Down and Buffers with Alt-Up
+vim.api.nvim_set_keymap("n", "<A-Up>", "<cmd>Telescope buffers<cr>", opts)
+vim.api.nvim_set_keymap("n", "<A-Down>", "<cmd>Telescope find_files<cr>", opts)

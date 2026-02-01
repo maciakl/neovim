@@ -51,8 +51,8 @@ vim.keymap.set("n", "<C-l>", "[sz=", opts)
 vim.keymap.set("i", "<C-l>", "<ESC>[sz=", opts)
 
 -- move visually selected block with Shift-J and Shift-K
-vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
-vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+vim.keymap.set("v", "<C-J>", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "<C-K>", ":m '<-2<CR>gv=gv")
 
 -- quick buffer switching with Alt-Arrows and buffer closing with Alt-k
 vim.keymap.set("n", "<A-left>", ":bprev<CR>", opts)

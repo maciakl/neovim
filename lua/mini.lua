@@ -26,3 +26,6 @@ require('mini.files').setup({
 
 -- Indent Line
 require('mini.indentscope').setup()
+
+-- Extend text objects
+require('mini.ai').setup()

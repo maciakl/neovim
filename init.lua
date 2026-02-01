@@ -78,7 +78,7 @@ vim.api.nvim_create_user_command('DOS', function() vim.cmd('set ff=dos') end, {}
 vim.api.nvim_create_user_command('UNIX', function() vim.cmd('set ff=unix') end, {})
 vim.api.nvim_create_user_command('MAC', function() vim.cmd('set ff=mac') end, {})
 
--- remove carriage return characters from file (supress errors)
+-- remove carriage return ^M characters from file
 vim.api.nvim_create_user_command('REMEM', function() vim.cmd([[ silent! %s/\r//g ]]) end, {})
 
 -- edit the init.lua file

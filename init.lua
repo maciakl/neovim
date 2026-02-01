@@ -28,10 +28,13 @@ vim.opt.swapfile        = false
 vim.opt.backup          = false
 vim.opt.undofile        = true
 
-vim.scrolloff           = 8
+-- keep 8 lines on the top/bot when scrolling
+vim.opt.scrolloff       = 8
+
+-- refresh time
 vim.opt.updatetime      = 50
 
--- the leftmost margin
+-- always show the leftmost margin to avoid text shifting
 vim.opt.signcolumn      = "yes"
 
 -- remap leader to space
@@ -50,7 +53,7 @@ vim.keymap.set("n", "<leader><space>", ":nohlsearch<CR>", opts)
 vim.keymap.set("n", "<C-l>", "[sz=", opts)
 vim.keymap.set("i", "<C-l>", "<ESC>[sz=", opts)
 
--- move visually selected block with Shift-J and Shift-K
+-- move visually selected block with Ctrl-J and Ctrl-K
 vim.keymap.set("v", "<C-J>", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "<C-K>", ":m '<-2<CR>gv=gv")
 

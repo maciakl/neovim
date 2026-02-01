@@ -146,8 +146,13 @@ Following plugins are in use.
 
 ### Helper Functions
 
-- [Mini.nvim](https://github.com/echasnovski/mini.nvim) - align, comment, surround, autopairs, autocomplete, file picker
-
+- [Mini.nvim](https://github.com/echasnovski/mini.nvim) -  one plugin to replace a bunch of plugins
+    - `mini.align` - replaces Tabularize
+    - `mini.comment` - replaces nerdcommenter
+    - `mini.completion` - replaces vim.cmp
+    - `mini.files` - replaces netrw
+    - `mini.surround` - replaces tpope/surround
+      
 ### LSP
 
 This is the config-free LSP setup:
@@ -179,7 +184,7 @@ Install language providers:
 
 ### Buffer Navigation
 
-- <kbd>Alt</kbd>+<kbd>←</kbd> - previous buffer
+- <kbd>Alt</kbd>+<kbd>←</kbd> - prev buffer
 - <kbd>Alt</kbd>+<kbd>→</kbd> - next buffer
 - <kbd>Alt</kbd>+<kbd>k</kbd> - close buffer
 - <kbd>Alt</kbd>+<kbd>↑</kbd> - open buffer picker
@@ -197,6 +202,8 @@ Install language providers:
 - <kbd>Ctrl</kbd>+<kbd>\\</kbd> - project symbol picker
 - <kbd>Alt</kbd>+<kbd>i</kbd> - show hover info
 - <kbd>Alt</kbd>+<kbd>o</kbd> - show error info
+- <kbd>Alt</kbd>+<kbd>n</kbd> - next error/warning
+- <kbd>Alt</kbd>+<kbd>p</kbd> - prev error/warning
 - <kbd>g</kbd>,<kbd>d</kbd> - go to definition
 - <kbd>ld</kbd>,<kbd>g</kbd>,<kbd>d</kbd> - open definition in a split
 - <kbd>ld</kbd>,<kbd>f</kbd> - format buffer

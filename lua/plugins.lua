@@ -56,3 +56,10 @@ require('treesitter')
 -- LSP SETUP
 -- Zero config LSP
 require('lsp')
+
+
+-- Temporary Update Command
+-- Update all plugins with :PackUpdate until :packupdate is implemented in 0.13+
+vim.api.nvim_create_user_command('PackUpdate', function()
+  vim.pack.update()
+end, {})

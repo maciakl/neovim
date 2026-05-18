@@ -24,7 +24,6 @@ $Env:LOCALAPPDATA\nvim
 
 ## Dependencies
 
-- [Plug](https://github.com/junegunn/vim-plug) - plugin manager (auto downnloaded on first run)
 - [Nerd Font](https://www.nerdfonts.com/) - a patched icon font (I'm using Fira Code)
 - [Node.js](https://nodejs.org/) - required for LSP plugins
 
@@ -66,11 +65,7 @@ git clone git@github.com:maciakl/neovim.git $Env:LOCALAPPDATA\nvim
 
 ### Post Config
 
-Run `nvim` for the first time.
-
-On the first run, Neovim will download and install the required plugins then close itself.
-
-Upon re-opening the editor run:
+To setup copilot, run:
 
     :Copilot setup
 
@@ -81,20 +76,20 @@ For easy maintenance, plugins are installed in:
 #### Mac/Unix/Linux: 
 
 ```bash
-~/.config/nvim/plugged/
+~/.local/share/nvim/site/pack
 ```
 
 #### Windows
 
 ```powershell
-%LOCALAPPDATA%\nvim\plugged\
+%LOCALAPPDATA%\nvim\site\pack
 ```
 
 #### Plugin Updates
 
 To update plugins, run:
 
-    :PlugUpdate
+    :lua vim.pack.update()
 
 ## Terminal Setup
 
